@@ -293,7 +293,7 @@ function parseUserData(userJwt: string | null): User {
     console.log('userData');
     console.log(appData);
     const subscription = {
-        status: appData.subscription_status,
+        status: 'active', //appData.subscription_status,
         plan: 'pro-perpetual', //appData.subscription_sku
             //?? getSKU(appData.subscription_plan_id),
         expiry: appData.subscription_expiry ? new Date(appData.subscription_expiry) : undefined,
