@@ -63,7 +63,7 @@ jobs:
         with:
           publish-dir: './dist'
           production-branch: main # Main goes to prod, others do deploy previews
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+          github-token: ${{ secrets.GH_TOKEN }}
           deploy-message: GHA Deploy - ${{ github.event.head_commit.message }}
           enable-commit-status: true
           enable-pull-request-comment: false
@@ -101,7 +101,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v3
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+          github-token: ${{ secrets.GH_TOKEN }}
           images: httptoolkit/ui
           tags: |
             type=raw,value=prod,enable={{is_default_branch}}
