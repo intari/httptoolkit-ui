@@ -71,9 +71,17 @@ export class AccountStore {
 
     @computed get userSubscription() {
     	console.log("request for user's subscription")
+
+        const plan = _.findKey(SubscriptionPlans, { paddleId: 599788 }) as SKU | undefined;
+
+        //const plan2 = _.find(SubscriptionPlans,     { paddleId: '599788' }  ) as SubscriptionPlan | undefined;
+    
+        //const myPlan = 'pro-perpetual': { paddleId: '599788', name: 'Pro (perpetual)', prices: 'priceless' } as SubscriptionPlan;
+        //const selectedPlan: SKU | undefined = yield this.pickPlan();
+
         const mySub = {
             status: 'active', 
-            plan: 'pro-perpetual',                 
+            plan: plan,                 
             expiry:  Date.now(), //TODO:far-future
         };
     
