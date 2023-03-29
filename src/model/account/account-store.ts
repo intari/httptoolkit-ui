@@ -79,6 +79,8 @@ export class AccountStore {
         this.user = yield getLatestUserData();
         this.accountDataLastUpdated = Date.now();
 
+	console.log('updateUser');
+	console.log(this.user);
         // Include the user email in error reports whilst they're logged in.
         // Useful generally, but especially for checkout/subscription issues.
         reportErrorsAsUser(this.user.email);
@@ -106,6 +108,9 @@ export class AccountStore {
     }
 
     @computed private get isStatusUnexpired() {
+        console.log('Asked if our subscription is not expired');
+        console.log(this.user.subscription);
+
         const subscriptionExpiry = this.user.subscription?.expiry;
         const subscriptionStatus = this.user.subscription?.status;
 
@@ -116,9 +121,9 @@ export class AccountStore {
             // development needs network connectivity anyway.
             ? 1000 * 60 * 60 * 24 * 7
             : 0;
-
-        return !!subscriptionExpiry &&
-            subscriptionExpiry.valueOf() + expiryMargin > Date.now();
+            //intari
+        return true; //!!subscriptionExpiry &&
+            // subscriptionExpiry.valueOf() + expiryMargin > Date.now();
     }
 
     @computed get isPaidUser() {
@@ -138,12 +143,14 @@ export class AccountStore {
         // Note that explicitly cancelled ('deleted') subscriptions are still
         // valid until the end of the last paid period though!
 	// intari: see e-mail communication with author for reasons why, do regular way as soon as possible
+	console.log('Asked if we are Paid user');
         return true;
 	//return this.user.subscription?.status !== 'past_due' &&
         //     this.isStatusUnexpired;
     }
 
     @computed get isPastDueUser() {
+	console.log('Asked if we are PastDue user');
         // Is the user a subscribed user whose payments are failing? Keep them
         // in an intermediate state so they can fix it (for now, until payment
         // retries fail, and their subscription cancels & expires completely).

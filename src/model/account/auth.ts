@@ -334,5 +334,7 @@ async function requestUserData(): Promise<string> {
         }
     });
 
+    console.log("got user data", appDataResponse.text());
+
     return appDataResponse.text();
 }
