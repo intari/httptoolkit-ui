@@ -123,9 +123,8 @@ jobs:
         run: |
           sleep 30 # Wait for Docker Hub to fully publish
 
-	        # TODO:intari, replace with something we can use 
           # Trigger a container redeploy:
-          #curl "https://app.hidora.com/1.0/environment/control/rest/redeploycontainersbygroup?session=$HIDORA_API_TOKEN&envName=htk-ui&nodeGroup=cp&tag=prod&useExistingVolumes=true" | \
+          # curl "https://app.hidora.com/1.0/environment/control/rest/redeploycontainersbygroup?session=$HIDORA_API_TOKEN&envName=htk-ui&nodeGroup=cp&tag=prod&useExistingVolumes=true" | \
           #   tee /dev/stderr | \
           #   grep -q 'Node has been successfully updated'
 
