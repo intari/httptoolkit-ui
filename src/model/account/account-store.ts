@@ -70,17 +70,28 @@ export class AccountStore {
     }
 
     @computed get userSubscription() {
-        return this.isPaidUser || this.isPastDueUser
-            ? this.user.subscription
-            : undefined;
+    	console.log("request for user's subscription")
+        const mySub = {
+            status: 'active', 
+            plan: 'pro-perpetual',                 
+            expiry:  Date.now(), //TODO:far-future
+        };
+    
+        return mySub;
+
+        //return this.isPaidUser || this.isPastDueUser
+        //    ? this.user.subscription
+        //    : mySub;
+
+
     }
 
     private updateUser = flow(function * (this: AccountStore) {
         this.user = yield getLatestUserData();
         this.accountDataLastUpdated = Date.now();
 
-	console.log('updateUser');
-	console.log(this.user);
+    	console.log('updateUser', this.user);
+
         // Include the user email in error reports whilst they're logged in.
         // Useful generally, but especially for checkout/subscription issues.
         reportErrorsAsUser(this.user.email);
