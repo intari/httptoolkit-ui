@@ -71,29 +71,17 @@ export class AccountStore {
 
     @computed get userSubscription() {
     	console.log("request for user's subscription")
-
-        //const plan = _.findKey(SubscriptionPlans, { paddleId: '599788' }) as SubscriptionPlan | 'plan not found';//undefined;
-
-        //const plan2 = _.find(SubscriptionPlans,     { paddleId: '599788' }  ) as SubscriptionPlan | undefined;
-        //const plan = SubscriptionPlans['pro-perpetual'];
-        //const myPlan = 'pro-perpetual': { paddleId: '599788', name: 'Pro (perpetual)', prices: 'priceless' } as SubscriptionPlan;
-        //const selectedPlan: SKU | undefined = yield this.pickPlan();
-
+        // TODO:what about just removing whole block?
         const mySub = {
             status: 'active', 
             plan: 'pro-perpetual',                 
-            expiry:  Date.now(), //TODO:far-future
-            updateBillingDetailsUrl: 'https://google.com',//appData.update_url,
-            cancelSubscriptionUrl: 'https://google.com',//appData.cancel_url,
-            lastReceiptUrl: 'https://google.com',//appData.last_receipt_url
+            expiry:  new Date(2457,1), //Date.now(), //TODO:far-future
+            updateBillingDetailsUrl: 'https://google.com',
+            cancelSubscriptionUrl: 'https://google.com',
+            lastReceiptUrl: 'https://google.com',
         };
     
         return mySub;
-
-        //return this.isPaidUser || this.isPastDueUser
-        //    ? this.user.subscription
-        //    : mySub;
-
 
     }
 
