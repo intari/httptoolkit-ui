@@ -2,8 +2,9 @@ import * as _ from 'lodash';
 import { reportError } from '../../errors';
 import { delay, doWhile } from '../../util/promise';
 
+// Intari
 export const ACCOUNTS_API = process.env.ACCOUNTS_API ??
-    `https://accounts.httptoolkit.tech/api`;
+    `https://accounts_dummy_httptoolkit.viorsan.com/api`;
 
 export interface SubscriptionPlan {
     paddleId: number;
