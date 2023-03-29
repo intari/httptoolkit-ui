@@ -1,6 +1,13 @@
-This is my custom test version of HTTP Toolkit UI repo.
+This is my modified version of HTTP Toolkit.
+Please use original unless I specifically asked you to use mine.
+Strange things could happen if you don't follow this advice
 
-original README below:
+
+intari
+
+Original README.md below:
+
+
 HTTP Toolkit UI [![Build Status](https://github.com/httptoolkit/httptoolkit-ui/workflows/CI/badge.svg)](https://github.com/httptoolkit/httptoolkit-ui/actions)
 ===================
 
