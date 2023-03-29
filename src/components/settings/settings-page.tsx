@@ -157,17 +157,7 @@ class SettingsPage extends React.Component<SettingsPageProps> {
                         </ContentLabel>
                         <ContentValue>
                             {
-                                ({
-                                    'active': 'Active',
-                                    'trialing': 'Active (trial)',
-                                    'past_due': <strong
-                                        title={dedent`
-                                            Your subscription payment failed, and will be reattempted.
-                                            If retried payments fail your subscription will be cancelled.
-                                        `}
-                                    >Past due <WarningIcon /></strong>,
-                                    'deleted': 'Cancelled'
-                                }[sub.status]) || 'Unknown'
+                              'Active (hardcoded)' 
                             }
                         </ContentValue>
                                                      
