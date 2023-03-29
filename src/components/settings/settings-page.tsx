@@ -149,7 +149,7 @@ class SettingsPage extends React.Component<SettingsPageProps> {
                             Account email
                         </ContentLabel>
                         <ContentValue>
-                            { userEmail }
+                            { 'not necessary' }
                         </ContentValue>
 
                         <ContentLabel>
