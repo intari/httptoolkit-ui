@@ -170,12 +170,13 @@ class SettingsPage extends React.Component<SettingsPageProps> {
                                 }[sub.status]) || 'Unknown'
                             }
                         </ContentValue>
-
+                                                     
                         <ContentLabel>
                             Subscription plan
                         </ContentLabel>
                         <ContentValue>
-                            { get(subscriptionPlans, sub.plan, 'name') || 'Unknown' }
+                            { 'Hardcoded' }
+                            // { get(subscriptionPlans, sub.plan, 'name') || 'Unknown' }
                         </ContentValue>
 
                         <ContentLabel>
