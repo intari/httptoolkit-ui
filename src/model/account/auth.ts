@@ -290,10 +290,12 @@ function parseUserData(userJwt: string | null): User {
         issuer: 'https://httptoolkit.tech/'
     });
 
+    console.log('userData');
+    console.log(appData);
     const subscription = {
         status: appData.subscription_status,
-        plan: appData.subscription_sku
-            ?? getSKU(appData.subscription_plan_id),
+        plan: 'pro-perpetual', //appData.subscription_sku
+            //?? getSKU(appData.subscription_plan_id),
         expiry: appData.subscription_expiry ? new Date(appData.subscription_expiry) : undefined,
         updateBillingDetailsUrl: appData.update_url,
         cancelSubscriptionUrl: appData.cancel_url,
