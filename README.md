@@ -8,7 +8,7 @@ intari
 Original README.md below:
 
 
-HTTP Toolkit UI [![Build Status](https://github.com/httptoolkit/httptoolkit-ui/workflows/CI/badge.svg)](https://github.com/httptoolkit/httptoolkit-ui/actions)
+HTTP Toolkit UI [![Build Status](https://github.com/intari/httptoolkit-ui/workflows/CI/badge.svg)](https://github.com/intari/httptoolkit-ui/actions)
 ===================
 
 This repo contains the UI for [HTTP Toolkit](https://httptoolkit.com), a beautiful, cross-platform & open-source HTTP(S) debugging proxy, analyzer & client.
