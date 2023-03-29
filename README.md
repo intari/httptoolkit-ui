@@ -1,4 +1,4 @@
-This is my modified version of HTTP Toolkit.
+This is my modified version of HTTP Toolkit UI.
 Please use original unless I specifically asked you to use mine.
 Strange things could happen if you don't follow this advice
 
