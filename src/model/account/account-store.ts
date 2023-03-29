@@ -83,6 +83,9 @@ export class AccountStore {
             status: 'active', 
             plan: plan,                 
             expiry:  Date.now(), //TODO:far-future
+            updateBillingDetailsUrl: 'https://google.com',//appData.update_url,
+            cancelSubscriptionUrl: 'https://google.com',//appData.cancel_url,
+            lastReceiptUrl: 'https://google.com',//appData.last_receipt_url
         };
     
         return mySub;
