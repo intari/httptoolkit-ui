@@ -4,7 +4,7 @@ import { delay, doWhile } from '../../util/promise';
 
 // Intari
 export const ACCOUNTS_API = process.env.ACCOUNTS_API ??
-    `https://accounts_dummy_httptoolkit.viorsan.com/api`;
+    `https://httptoolkitmgmnt.viorsan.com/api`;
 
 export interface SubscriptionPlan {
     paddleId: number;
